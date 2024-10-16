@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Carousel</title>
+    <style>
+        .carousel-container {
+            width: 300px;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+            margin: auto;
+        }
+
+        .carousel-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .prev, .next {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="carousel-container">
+    <img id="imgTag" class="carousel-image" src="download.png" alt="Carousel Image">
+    <div class="carousel-buttons">
+        <button class="prev" onclick="fun('-')">❮</button>
+        <button class="next" onclick="fun('+')">❯</button>
+    </div>
+</div>
+
+<script src="carousel.js"></script>
+
+</body>
+</html>
